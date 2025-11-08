@@ -50,11 +50,7 @@ body {
 
 /* light theme body override */
 .theme-light body {
-  background: linear-gradient(
-    112.65deg,
-    #ffffff 0.28%,
-    rgba(70, 97, 115, 0) 178.65%
-  );
+  background: linear-gradient(112.65deg, #ffffff 0.28%, #466173 178.65%);
 }
 
 .layout-container {

@@ -52,10 +52,7 @@ watch(
 </script>
 
 <style scoped>
-/* .search-bar {
-  display: flex;
-  gap: 8px;
-} */
+
 .search-bar {
   display: flex;
 }
@@ -92,7 +89,15 @@ watch(
 .search-input-wrapper input {
   color: var(--card-color, #ffffff);
 }
-.search-input-wrapper input::placeholder {
-  color: var(--card-color, rgba(255, 255, 255, 0.6));
+
+.theme-light .search-input-wrapper input {
+  border: 1px solid #111;
+}
+
+.theme-dark .search-input-wrapper input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.theme-light .search-input-wrapper input::placeholder {
+  color: #111;
 }
 </style>
