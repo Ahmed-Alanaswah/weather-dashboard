@@ -19,5 +19,9 @@
   padding: 16px;
   box-sizing: border-box;
   min-height: 250px;
+  /* Add smooth transitions for theme changes */
+  transition: background-color 0.5s ease-in-out, 
+              color 0.5s ease-in-out,
+              filter 0.5s ease-in-out;
 }
 </style>

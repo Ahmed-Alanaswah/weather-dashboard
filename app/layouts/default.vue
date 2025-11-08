@@ -46,6 +46,8 @@ body {
   color: #111111;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* Add smooth transition for theme changes */
+  transition: background 0.5s ease-in-out;
 }
 
 /* light theme body override */
@@ -59,6 +61,11 @@ body {
 }
 
 /* Theme variables: provide card and icon rules for light/dark themes */
+:root {
+  /* Add transitions for CSS variables */
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
 :root.theme-dark {
   --card-bg: #444;
   --card-color: #ffffff;
@@ -103,12 +110,24 @@ body {
   --icon-filter: invert(1) grayscale(1) contrast(0.9);
 }
 
+/* Add transitions to elements that use CSS variables - be more specific to avoid performance issues */
+.card-cox-shadow,
+button,
+input,
+.toggle-label {
+  transition: background-color 0.5s ease-in-out, 
+              color 0.5s ease-in-out,
+              border-color 0.5s ease-in-out;
+}
+
 /* Apply icon filter to icons located under /assets/icons when in light theme */
 .theme-light img[src*="/assets/icons/"] {
   filter: var(--icon-filter, none);
+  transition: filter 0.5s ease-in-out;
 }
 
 .theme-dark img[src*="/assets/icons/"] {
   filter: var(--icon-filter, none);
+  transition: filter 0.5s ease-in-out;
 }
 </style>
