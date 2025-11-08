@@ -1,6 +1,16 @@
 <template>
-  <button class="current-location" :disabled="locating" @click="locate">
-    {{ locating ? "Locating..." : "Use current location" }}
+  <button
+    class="current-location"
+    :disabled="locating"
+    @click="locate"
+    aria-label="Use current location"
+  >
+    <img
+      src="/assets/icons/current-location.png"
+      alt="location"
+      class="loc-icon"
+    />
+    <span>{{ locating ? "Locating..." : "Current Location" }}</span>
   </button>
 </template>
 
@@ -12,6 +22,13 @@ const locating = ref(false);
 const store = useWeatherStore();
 
 async function locate() {
+  // signal the SearchBar to clear its visible input
+  try {
+    // increment the numeric signal so watchers detect a change
+    store.clearSearchSignal = (store.clearSearchSignal || 0) + 1;
+  } catch (e) {
+    // ignore if store isn't available
+  }
   if (!("geolocation" in navigator)) return;
   locating.value = true;
   try {
@@ -20,6 +37,7 @@ async function locate() {
         (pos) => {
           const lat = pos.coords.latitude;
           const lon = pos.coords.longitude;
+          // call fetchWeather with coordinates but do NOT modify the visible search input
           void store.fetchWeather(`${lat},${lon}`);
           resolve();
         },
@@ -38,13 +56,28 @@ async function locate() {
 <style scoped>
 .current-location {
   padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: transparent;
+  border: none;
   cursor: pointer;
+  width: 292px;
+  height: 62px;
+  background: var(--action-bg, #4cbb17);
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+  border-radius: 40px;
+  color: var(--action-color, #ffffff);
+  font-style: normal;
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 33px;
+  color: var(--action-color, rgba(255,255,255,0.8));
+  margin-left: 80px;
 }
 .current-location[disabled] {
   opacity: 0.6;
   cursor: default;
+}
+
+.current-location .loc-icon {
+  vertical-align: middle;
+  margin-right: 15px;
 }
 </style>

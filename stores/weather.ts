@@ -18,8 +18,10 @@ let currentController: AbortController | null = null;
 
 export const useWeatherStore = defineStore("weather", {
   state: () => ({
-    query: "Amman",
+    query: "",
     lastQuery: "",
+  // increment this to signal components (like SearchBar) to clear their local input
+  clearSearchSignal: 0 as number,
     loading: false as boolean,
     error: null as string | null,
     city: "" as string,

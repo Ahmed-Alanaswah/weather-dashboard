@@ -30,6 +30,9 @@ const props = withDefaults(
 </script>
 
 <style scoped>
+.card-container {
+  width: 445px;
+}
 .day-card {
   display: flex;
   justify-content: space-between;
@@ -39,5 +42,23 @@ const props = withDefaults(
 h2 {
   text-align: center;
   margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.day-card > span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.day-card > span + span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
 }
 </style>

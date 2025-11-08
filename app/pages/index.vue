@@ -84,7 +84,7 @@ onMounted(() => {
 .app-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
 }
 .top {
   display: flex;

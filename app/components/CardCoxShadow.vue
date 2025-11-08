@@ -12,9 +12,10 @@
 .card-cox-shadow {
   filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.5));
   /* Minimal defaults so the slot content is visible. Override with CSS variables or wrapper classes as needed. */
-  background: #444;
-  color: #fff;
-  border-radius: 8px;
+  /* use CSS variables so themes can override */
+  background: var(--card-bg, #444);
+  color: var(--card-color, #fff);
+  border-radius: 30px;
   padding: 16px;
   box-sizing: border-box;
   min-height: 250px;
