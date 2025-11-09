@@ -10,7 +10,9 @@
           <img
             src="/assets/icons//direction-arrow.png"
             alt="direction"
-            :style="{ transform: `rotate(${getWindDegrees(hour.wind_dir)}deg)` }"
+            :style="{
+              transform: `rotate(${getWindDegrees(hour.wind_dir)}deg)`,
+            }"
           />
           <!-- <span class="time-temp">{{ hour.wind_dir }}</span> -->
           <span class="time-date">{{ hour.wind_kph }} km/h</span>
@@ -34,21 +36,16 @@
 </template>
 
 <script setup lang="ts">
-import { getWindDegrees } from "../helpers/getDirectionHelper";
+import type { HourItem } from "~~/types/weather";
+import { getWindDegrees } from "../../helpers/getDirectionHelper";
 const props = withDefaults(
   defineProps<{
-    hours?: Array<{
-      time?: string;
-      wind_kph?: number | null;
-      temp?: number | null;
-      icon?: string;
-      wind_dir?: string;
-    }>;
+    hours?: HourItem[];
   }>(),
   {
-    hours: [],
+    hours: () => [] as HourItem[],
   }
 );
 </script>
 
-<style scoped src="../../public/assets/css/HourlyForecast.css"></style>
+<style scoped src="../../../assets/css//HourlyForecast.css"></style>

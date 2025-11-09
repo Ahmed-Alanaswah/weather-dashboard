@@ -28,4 +28,4 @@ const props = withDefaults(
 );
 </script>
 
-<style scoped src="../../public/assets/css/SpeceficInfoCard.css"></style>
+<style scoped src="../../../assets/css/SpeceficInfoCard.css"></style>

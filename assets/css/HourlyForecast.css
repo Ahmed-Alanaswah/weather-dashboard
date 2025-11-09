@@ -1,29 +1,45 @@
+/* ==========================
+   Card Container
+========================== */
 .card-container {
   color: var(--card-color, #fff);
 }
-.hour-container {
-  padding-bottom: 30px;
-}
-.hour-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--card-card-bg, #373636);
-  color: var(--card-color, #ffffff);
-  border-radius: 40px;
-  height: 270px;
-  width: 130px;
-  justify-content: center;
-}
-.hour-card:nth-child(4),
-.hour-card:nth-last-child(1) {
-  background: var(--card-card-night-bg, #373636);
-}
+
+/* ==========================
+   Hourly Cards Container
+========================== */
 .hour-container {
   display: flex;
   justify-content: center;
   gap: 15px;
+  padding-bottom: 30px;
 }
+
+/* ==========================
+   Hour Card
+========================== */
+.hour-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 130px;
+  height: 270px;
+
+  background: var(--card-card-bg, #373636);
+  color: var(--card-color, #ffffff);
+  border-radius: 40px;
+}
+
+.hour-card:nth-child(4),
+.hour-card:nth-last-child(1) {
+  background: var(--card-card-night-bg, #373636);
+}
+
+/* ==========================
+   Headings and Text
+========================== */
 h2 {
   text-align: center;
   font-family: "Poppins";
@@ -31,9 +47,9 @@ h2 {
   font-weight: 700;
   font-size: 32px;
   line-height: 48px;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
+
 span {
   font-style: normal;
   font-weight: 700;
@@ -41,16 +57,22 @@ span {
   line-height: 36px;
 }
 
+/* Hour icon rotation */
 .hour-icon {
   transform: rotate(30deg);
 }
 
-/* Skeleton loading styles */
+/* ==========================
+   Skeleton Loading
+========================== */
 .skeleton-hour {
+  display: flex;
   gap: 15px;
 }
 
+/* Skeleton lines */
 .skeleton-hour .skeleton-line {
+  border-radius: 8px;
   background: linear-gradient(
     90deg,
     var(--skeleton-base, rgba(255, 255, 255, 0.1)) 25%,
@@ -59,12 +81,13 @@ span {
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s ease-in-out infinite;
-  border-radius: 8px;
 }
 
+/* Skeleton icon */
 .skeleton-hour .skeleton-icon {
   width: 80px;
   height: 80px;
+  border-radius: 50%;
   background: linear-gradient(
     90deg,
     var(--skeleton-base, rgba(255, 255, 255, 0.1)) 25%,
@@ -73,9 +96,9 @@ span {
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s ease-in-out infinite;
-  border-radius: 50%;
 }
 
+/* Skeleton text elements */
 .skeleton-hour .skeleton-time {
   width: 60px;
   height: 36px;
@@ -91,6 +114,9 @@ span {
   height: 24px;
 }
 
+/* ==========================
+   Skeleton Animation Keyframes
+========================== */
 @keyframes skeleton-loading {
   0% {
     background-position: 200% 0;

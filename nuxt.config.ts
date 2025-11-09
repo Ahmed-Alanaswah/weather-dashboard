@@ -50,8 +50,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      WEATHERAPI_KEY:
-        process.env.WEATHERAPI_KEY || "eb373b51a0eb4b739e8180350250611",
+      WEATHERAPI_KEY: process.env.WEATHERAPI_KEY,
     },
   },
   css: ["./public/assets/css/Layout.css"],

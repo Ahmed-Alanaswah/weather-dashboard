@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import { useUiStore } from "../../stores/ui";
+import { useUiStore } from "../../../stores/ui";
 
 const ui = useUiStore();
 function toggle() {
@@ -26,4 +26,4 @@ function toggle() {
 }
 </script>
 
-<style scoped src="../../assets/css/ToggleThemeMode.css"></style>
+<style scoped src="../../../assets/css//ToggleThemeMode.css"></style>

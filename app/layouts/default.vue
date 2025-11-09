@@ -34,5 +34,3 @@ onMounted(() => {
   );
 });
 </script>
-
-<!-- <style src="../../public/assets/css/Layout.css"></style> -->

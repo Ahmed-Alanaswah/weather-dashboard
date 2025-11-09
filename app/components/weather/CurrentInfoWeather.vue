@@ -76,7 +76,7 @@
 </template>
 
 <script setup lang="ts">
-import SpeceficInfoCard from "./SpeceficInfoCard.vue";
+import SpeceficInfoCard from "../ui/SpeceficInfoCard.vue";
 
 const props = withDefaults(
   defineProps<{
@@ -122,4 +122,4 @@ const icons = {
 };
 </script>
 
-<style scoped src="../../assets/css/CurrentInfoWeather.css"></style>
+<style scoped src="../../../assets/css/CurrentInfoWeather.css"></style>

@@ -75,3 +75,12 @@
     opacity: 1;
   }
 }
+
+.error-banner {
+  background-color: #f87171; /* red-400 */
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  text-align: center;
+}

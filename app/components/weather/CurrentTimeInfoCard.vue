@@ -24,4 +24,4 @@ const props = withDefaults(
 );
 </script>
 
-<style scoped src="../../assets/css/CurrentTimeInfoCard.css"></style>
+<style scoped src="../../../assets/css/CurrentTimeInfoCard.css"></style>

@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { onMounted, computed } from "vue";
-import CardCoxShadow from "../components/CardCoxShadow.vue";
-import CurrentTimeInfoCard from "../components/CurrentTimeInfoCard.vue";
-import CurrentInfoWeather from "../components/CurrentInfoWeather.vue";
-import DailyForecastCard from "../components/DailyForecastCard.vue";
-import HourlyForecast from "../components/HourlyForecast.vue";
-import LoadingSpinner from "../components/LoadingSpinner.vue";
+import CardCoxShadow from "../components/ui/CardCoxShadow.vue";
+import CurrentTimeInfoCard from "../components/weather/CurrentTimeInfoCard.vue";
+import CurrentInfoWeather from "../components/weather/CurrentInfoWeather.vue";
+import DailyForecastCard from "../components/weather/DailyForecastCard.vue";
+import HourlyForecast from "../components/weather/HourlyForecast.vue";
+import LoadingSpinner from "../components/ui/LoadingSpinner.vue";
 import { useWeatherStore } from "../../stores/weather";
-import { getCurruntLocationInf } from "../helpers/getCurruntLocationInf";
+import { getCurruntLocationInf } from "../helpers/getCurrentLocationInfo";
 
 const store = useWeatherStore();
 
@@ -26,7 +26,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="app-container" v-cloak>
+  <!-- Error Banner -->
+  <div v-if="store.error" class="error-banner">
+    {{ store.error }}
+  </div>
+  <div v-else class="app-container" v-cloak>
     <Transition name="fade-slide" mode="out-in">
       <div v-if="isLoading && !hasData" class="top" key="loading-top">
         <!-- Loading state for top section -->

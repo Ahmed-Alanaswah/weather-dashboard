@@ -19,8 +19,8 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
-import { useWeatherStore } from "../../stores/weather";
-import { getCurruntLocationInf } from "../helpers/getCurruntLocationInf";
+import { useWeatherStore } from "../../../stores/weather";
+import { getCurruntLocationInf } from "../../helpers/getCurrentLocationInfo";
 const store = useWeatherStore();
 
 const localQuery = ref("");
@@ -53,4 +53,4 @@ watch(
 );
 </script>
 
-<style scoped src="../../assets/css/SearchBar.css"></style>
+<style scoped src="../../../assets/css/SearchBar.css"></style>

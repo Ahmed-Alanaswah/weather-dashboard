@@ -1,9 +1,12 @@
+/* ==========================
+   FOUC & Initial Load
+========================== */
 /* Prevent FOUC - Hide elements until Vue is ready */
 [v-cloak] {
   display: none !important;
 }
 
-/* Initial loading screen */
+/* Initial Nuxt loading screen */
 #__nuxt {
   min-height: 100vh;
   opacity: 0;
@@ -14,51 +17,56 @@
   opacity: 1;
 }
 
-/* Make body background red for the whole app and center page content at 90% width */
+/* ==========================
+   Body / Layout
+========================== */
 body {
-  /* Weather Dashboard - global settings */
-
   position: relative;
   width: 1512px;
   height: 982px;
   padding-top: 63px;
-  /* default (dark) background */
+
+  /* Dark gradient background by default */
   background: linear-gradient(
     110.05deg,
     #383838 0%,
     rgba(158, 158, 158, 0) 71.82%
   );
   color: #111111;
+
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  /* Add smooth transition for theme changes */
+
+  /* Smooth theme transitions */
   transition: background 0.5s ease-in-out;
-  /* Prevent flash during load - use opacity instead of visibility for smoother transition */
-  opacity: 0;
+  opacity: 0; /* prevent flash during load */
 }
 
-/* Show body once CSS is loaded */
 body.loaded {
   opacity: 1;
   transition: opacity 0.2s ease-in;
 }
 
-/* light theme body override */
+/* Light theme body override */
 .theme-light body {
   background: linear-gradient(112.65deg, #ffffff 0.28%, #466173 178.65%);
 }
 
+/* Layout container */
 .layout-container {
   width: 1326px;
   margin: 0 auto;
 }
 
-/* Theme variables: provide card and icon rules for light/dark themes */
+/* ==========================
+   Theme Variables
+========================== */
 :root {
-  /* Add transitions for CSS variables */
+  /* Smooth variable transitions */
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
+/* Dark Theme Variables */
 :root.theme-dark {
   --card-bg: #444;
   --bg-time-color: linear-gradient(
@@ -68,23 +76,27 @@ body.loaded {
   ) !important;
   --card-color: #ffffff;
   --muted-color: rgba(255, 255, 255, 0.8);
+
   --action-bg: #4cbb17;
   --action-color: #ffffff;
+
   --toggle-track-bg: #d9d9d9;
   --card-card-bg: #373636;
   --card-card-night-bg: #373636;
   --toggle-track-on-bg: #111111;
   --thumb-bg: #111111;
   --thumb-on-bg: #ffffff;
+
   --toggle-label-color: #000000;
   --toggle-label-on-color: #ffffff;
+
   --icon-filter: none;
   --skeleton-base: rgba(255, 255, 255, 0.1);
   --skeleton-highlight: rgba(255, 255, 255, 0.2);
 }
 
+/* Light Theme Variables */
 :root.theme-light {
-  /* User requested card background #D9D9D9; assume readable text should be dark */
   --card-bg: #d9d9d9;
   --bg-time-color: linear-gradient(
     80.34deg,
@@ -93,6 +105,7 @@ body.loaded {
   ) !important;
   --card-color: #111111;
   --muted-color: rgba(17, 17, 17, 0.8);
+
   --card-card-bg: linear-gradient(
     170.72deg,
     #f88508 -14.96%,
@@ -103,21 +116,28 @@ body.loaded {
     #443d64 -15.92%,
     rgba(101, 130, 198, 0) 192.45%
   );
+
   --action-bg: #4cbb17;
   --action-color: #ffffff;
+
   --toggle-track-bg: #d9d9d9;
   --toggle-track-on-bg: #d9d9d9;
   --thumb-bg: #111111;
   --thumb-on-bg: #ffffff;
+
   --toggle-label-color: #000000;
   --toggle-label-on-color: #111111;
-  /* invert light (white) PNGs to appear black */
+
+  /* Invert light icons */
   --icon-filter: invert(1) grayscale(1) contrast(0.9);
+
   --skeleton-base: rgba(17, 17, 17, 0.1);
   --skeleton-highlight: rgba(17, 17, 17, 0.2);
 }
 
-/* Add transitions to elements that use CSS variables - be more specific to avoid performance issues */
+/* ==========================
+   Transition for interactive elements
+========================== */
 .card-cox-shadow,
 button,
 input,
@@ -126,7 +146,9 @@ input,
     border-color 0.5s ease-in-out;
 }
 
-/* Apply icon filter to icons located under /assets/icons when in light theme */
+/* ==========================
+   Icon Filters for Theme
+========================== */
 .theme-light img[src*="/assets/icons/"] {
   filter: var(--icon-filter, none);
   transition: filter 0.5s ease-in-out;

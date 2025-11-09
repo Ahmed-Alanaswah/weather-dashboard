@@ -1,46 +1,9 @@
 import { defineStore } from "pinia";
 import { useRuntimeConfig } from "#imports";
-
-type DayItem = {
-  icon?: string;
-  date?: string;
-  avg_temperature?: number | null;
-};
-type HourItem = {
-  time?: string;
-  temp?: number | null;
-  icon?: string;
-  wind_kph?: number | null;
-  wind_dir?: string;
-};
+import type { DayItem, HourItem } from "../types/weather";
+import { WEEKDAYS, MONTHS } from "../constants/date";
 
 let currentController: AbortController | null = null;
-
-// Helper functions for date formatting
-const WEEKDAYS = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-const MONTHS = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
 
 function formatDate(dateString: string): string {
   try {
@@ -105,14 +68,14 @@ export const useWeatherStore = defineStore("weather", {
     city: "" as string,
     time: "" as string,
     date: "" as string,
-    temp: null as number | null,
-    feelslike: null as number | null,
+    temp: "" as number | string,
+    feelslike: "" as number | string,
     condition: "" as string,
     conditionIcon: "" as string,
-    humidity: null as number | null,
-    pressure: null as number | null,
-    wind: null as number | null,
-    uv: null as number | null,
+    humidity: "" as number | string,
+    pressure: "" as number | string,
+    wind: "" as number | string,
+    uv: "" as number | string,
     sunrise: "" as string,
     sunset: "" as string,
     days: [] as DayItem[],
@@ -194,7 +157,7 @@ export const useWeatherStore = defineStore("weather", {
 
         return hourlyItems;
       } catch (e) {
-        return [];
+        throw new Error("Failed to fetch weather data");
       }
     },
 

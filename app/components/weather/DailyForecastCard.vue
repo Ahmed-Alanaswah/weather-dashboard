@@ -19,18 +19,16 @@
 </template>
 
 <script setup lang="ts">
+import type { DayItem } from "~~/types/weather";
+
 const props = withDefaults(
   defineProps<{
-    days?: Array<{
-      icon?: string;
-      date?: string;
-      avg_temperature?: number | null;
-    }>;
+    days?: DayItem[];
   }>(),
   {
-    days: [],
+    days: () => [] as DayItem[],
   }
 );
 </script>
 
-<style scoped src="../../assets/css/DailyForecastCard.css"></style>
+<style scoped src="../../../assets/css/DailyForecastCard.css"></style>

@@ -1,15 +1,26 @@
+/* ==========================
+   Toggle Wrapper
+========================== */
 .toggle-wrapper {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
+
+/* ==========================
+   Toggle Button
+========================== */
 .toggle {
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
+
+/* ==========================
+   Track (Background of Toggle)
+========================== */
 .track {
   width: 100px;
   height: 38.61px;
@@ -21,9 +32,15 @@
   box-sizing: border-box;
   transition: background 200ms ease;
 }
+
+/* Track active state */
 .track.on {
   border: 1px solid var(--toggle-track-on-bg, #000000);
 }
+
+/* ==========================
+   Thumb (Movable Circle)
+========================== */
 .thumb {
   width: 30px;
   height: 30px;
@@ -33,9 +50,15 @@
   transform: translateX(5px);
   transition: transform 200ms ease, background 200ms ease;
 }
+
+/* Thumb active state */
 .thumb.on {
   transform: translateX(55px);
 }
+
+/* ==========================
+   Toggle Label
+========================== */
 .toggle-label {
   font-style: normal;
   font-weight: 800;
@@ -44,6 +67,7 @@
   color: var(--toggle-label-color, #000);
 }
 
+/* Label active state */
 .toggle-label.on {
   color: var(--toggle-label-on-color, #ffffff);
 }

@@ -1,4 +1,6 @@
-/* Main Infos */
+/* ==========================
+   Main Info Container
+========================== */
 .current-time-info {
   display: flex;
   flex-direction: column;
@@ -8,18 +10,20 @@
   color: var(--card-color, #ffffff);
   padding: 34px;
 }
-.city {
-  margin-bottom: 50px;
-  margin-top: 0px;
 
+/* ==========================
+   Text Elements
+========================== */
+.city {
+  margin: 0 0 50px 0;
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 54px;
 }
+
 .time {
-  margin-bottom: 0px;
-  margin-top: 0px;
+  margin: 0;
   font-style: normal;
   font-weight: 700;
   font-size: 96px;
@@ -27,15 +31,18 @@
 }
 
 .date {
+  margin: 0;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  margin: 0;
 }
 
-/* Skeleton loading styles */
+/* ==========================
+   Skeleton Loading
+========================== */
 .skeleton-line {
+  border-radius: 8px;
   background: linear-gradient(
     90deg,
     var(--skeleton-base, rgba(255, 255, 255, 0.1)) 25%,
@@ -44,21 +51,19 @@
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s ease-in-out infinite;
-  border-radius: 8px;
 }
 
+/* Skeleton sizes for main info */
 .skeleton-city {
   width: 200px;
   height: 54px;
-  margin-bottom: 50px;
-  margin-top: 0;
+  margin: 0 0 50px 0;
 }
 
 .skeleton-time {
   width: 300px;
   height: 125px;
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
 }
 
 .skeleton-date {
@@ -67,6 +72,9 @@
   margin: 0;
 }
 
+/* ==========================
+   Skeleton Animation Keyframes
+========================== */
 @keyframes skeleton-loading {
   0% {
     background-position: 200% 0;

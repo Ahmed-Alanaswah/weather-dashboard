@@ -1,20 +1,18 @@
+/* ==========================
+   Card Container
+========================== */
 .card-container {
   width: 445px;
   color: var(--card-color, #fff);
 }
+
+/* ==========================
+   Day Card
+========================== */
 .day-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-h2 {
-  text-align: center;
-  margin: 0;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 48px;
 }
 
 .day-card > span {
@@ -25,26 +23,44 @@ h2 {
 }
 
 .day-card > span + span {
-  font-style: normal;
-  font-weight: 600;
   font-size: 20px;
   line-height: 30px;
 }
 
-/* Skeleton loading styles */
+/* ==========================
+   Headings
+========================== */
+h2 {
+  text-align: center;
+  margin: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+/* ==========================
+   Skeleton Loading
+========================== */
+
+/* Skeleton wrapper for multiple days */
 .loading-days {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
+/* Skeleton for individual day card */
 .skeleton-day {
+  display: flex;
   gap: 15px;
 }
 
+/* Skeleton icon */
 .skeleton-icon {
   width: 50px;
   height: 50px;
+  border-radius: 8px;
   background: linear-gradient(
     90deg,
     var(--skeleton-base, rgba(255, 255, 255, 0.1)) 25%,
@@ -53,10 +69,11 @@ h2 {
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s ease-in-out infinite;
-  border-radius: 8px;
 }
 
+/* Skeleton lines */
 .skeleton-line {
+  border-radius: 8px;
   background: linear-gradient(
     90deg,
     var(--skeleton-base, rgba(255, 255, 255, 0.1)) 25%,
@@ -65,9 +82,9 @@ h2 {
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s ease-in-out infinite;
-  border-radius: 8px;
 }
 
+/* Skeleton temp and date sizes */
 .skeleton-temp {
   width: 80px;
   height: 36px;
@@ -78,6 +95,9 @@ h2 {
   height: 30px;
 }
 
+/* ==========================
+   Skeleton Animation Keyframes
+========================== */
 @keyframes skeleton-loading {
   0% {
     background-position: 200% 0;

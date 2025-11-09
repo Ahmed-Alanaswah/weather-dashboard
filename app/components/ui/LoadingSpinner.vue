@@ -22,4 +22,4 @@ withDefaults(
 );
 </script>
 
-<style scoped src="../../assets/css/LoadingSpinner.css"></style>
+<style scoped src="../../../assets/css/LoadingSpinner.css"></style>
