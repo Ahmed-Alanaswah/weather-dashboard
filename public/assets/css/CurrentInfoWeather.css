@@ -47,11 +47,12 @@
   font-size: 53px;
   line-height: 50px;
   margin: 0;
-  color: linear-gradient(
-    80.34deg,
-    #292929 -2.93%,
-    rgba(255, 255, 255, 0) 212.44%
-  ) !important;
+  background: var(
+    --bg-time-color,
+    linear-gradient(84.4deg, #ffffff -16.56%, rgba(255, 255, 255, 0) 118.43%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .left-info > p {

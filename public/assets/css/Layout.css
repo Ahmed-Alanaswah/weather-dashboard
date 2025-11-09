@@ -37,7 +37,7 @@ body {
 
 :root.theme-dark {
   --card-bg: #444;
-  --color-time: linear-gradient(
+  --bg-time-color: linear-gradient(
     84.4deg,
     #ffffff -16.56%,
     rgba(255, 255, 255, 0) 118.43%
@@ -60,10 +60,10 @@ body {
 :root.theme-light {
   /* User requested card background #D9D9D9; assume readable text should be dark */
   --card-bg: #d9d9d9;
-  --color-time: linear-gradient(
+  --bg-time-color: linear-gradient(
     80.34deg,
     #292929 -2.93%,
-    rgba(255, 255, 255, 0) 212.44%
+    #ffffff 212.44%
   ) !important;
   --card-color: #111111;
   --muted-color: rgba(17, 17, 17, 0.8);

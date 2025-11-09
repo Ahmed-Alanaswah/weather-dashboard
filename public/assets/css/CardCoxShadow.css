@@ -3,7 +3,6 @@
   /* Minimal defaults so the slot content is visible. Override with CSS variables or wrapper classes as needed. */
   /* use CSS variables so themes can override */
   background: var(--card-bg, #444);
-  color: var(--card-color, #fff);
   border-radius: 30px;
   padding: 16px;
   box-sizing: border-box;

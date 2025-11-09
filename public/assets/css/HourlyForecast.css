@@ -1,3 +1,6 @@
+.card-container {
+  color: var(--card-color, #fff);
+}
 .hour-container {
   padding-bottom: 30px;
 }

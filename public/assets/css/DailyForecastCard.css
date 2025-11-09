@@ -1,5 +1,6 @@
 .card-container {
   width: 445px;
+  color: var(--card-color, #fff);
 }
 .day-card {
   display: flex;
