@@ -199,8 +199,6 @@ export const useWeatherStore = defineStore("weather", {
     },
 
     async fetchWeather(q: string) {
-      if (!q) return;
-
       // Initialize loading state
       this.loading = true;
       this.error = null;

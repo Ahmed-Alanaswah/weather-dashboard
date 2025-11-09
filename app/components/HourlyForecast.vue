@@ -6,7 +6,12 @@
         <span class="hour-time">{{ hour.time }}</span>
         <img :src="hour.icon" :alt="`${hour.time} condition`" />
         <span class="time-temp">{{ hour.temp }}°C</span>
-        <span class="time-temp">{{ hour.wind_dir }}</span>
+        <img
+          src="/assets/icons//direction-arrow.png"
+          alt="direction"
+          :style="{ transform: `rotate(${getWindDegrees(hour.wind_dir)}deg)` }"
+        />
+        <!-- <span class="time-temp">{{ hour.wind_dir }}</span> -->
         <span class="time-date">{{ hour.wind_kph }} km/h</span>
       </div>
     </div>
@@ -14,6 +19,7 @@
 </template>
 
 <script setup lang="ts">
+import { getWindDegrees } from "../helpers/getDirectionHelper";
 const props = withDefaults(
   defineProps<{
     hours?: Array<{
@@ -28,49 +34,6 @@ const props = withDefaults(
     hours: [],
   }
 );
-
-// The component still accepts slot content if you prefer that pattern —
-// but the primary API requested is props: city, time, date.
 </script>
 
-<style scoped>
-.hour-container {
-  padding-bottom: 30px;
-}
-.hour-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: var(--card-card-bg, #373636);
-  color: var(--card-color, #ffffff);
-  border-radius: 40px;
-  height: 270px;
-  width: 130px;
-  justify-content: center;
-}
-.hour-card:nth-child(4),
-.hour-card:nth-last-child(1) {
-  background: var(--card-card-night-bg, #373636);
-}
-.hour-container {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-h2 {
-  text-align: center;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 48px;
-  margin: 0;
-  margin-bottom: 20px;
-}
-span {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-}
-</style>
+<style scoped src="../../public/assets/css/HourlyForecast.css"></style>

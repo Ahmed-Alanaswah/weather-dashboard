@@ -25,4 +25,5 @@ export default defineNuxtConfig({
         process.env.WEATHERAPI_KEY || "eb373b51a0eb4b739e8180350250611",
     },
   },
+  css: ["./public/assets/css/Layout.css"],
 });
