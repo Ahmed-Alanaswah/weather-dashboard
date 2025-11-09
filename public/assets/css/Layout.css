@@ -149,12 +149,12 @@ input,
 /* ==========================
    Icon Filters for Theme
 ========================== */
-.theme-light img[src*="/assets/icons/"] {
+.theme-light img[src^="/assets/icons/"]:not([src*="/assets/icons/wind/"]) {
   filter: var(--icon-filter, none);
   transition: filter 0.5s ease-in-out;
 }
 
-.theme-dark img[src*="/assets/icons/"] {
+.theme-dark img[src^="/assets/icons/"]:not([src*="/assets/icons/wind/"]) {
   filter: var(--icon-filter, none);
   transition: filter 0.5s ease-in-out;
 }

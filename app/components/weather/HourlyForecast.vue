@@ -8,7 +8,7 @@
           <img :src="hour.icon" :alt="`${hour.time} condition`" />
           <span class="time-temp">{{ hour.temp }}°C</span>
           <img
-            src="/assets/icons//direction-arrow.png"
+            src="/assets/icons/wind/direction-arrow.png"
             alt="direction"
             :style="{
               transform: `rotate(${getWindDegrees(hour.wind_dir)}deg)`,
