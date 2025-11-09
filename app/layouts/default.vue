@@ -1,5 +1,5 @@
 <template>
-  <div class="layout-container">
+  <div class="layout-container" v-cloak>
     <AppHeader />
     <slot />
   </div>
@@ -17,6 +17,13 @@ function applyTheme(t: string) {
   if (!root) return;
   root.classList.remove("theme-dark", "theme-light");
   root.classList.add(t === "dark" ? "theme-dark" : "theme-light");
+}
+
+// Apply theme immediately on client side
+if (typeof document !== "undefined") {
+  const savedTheme =
+    localStorage.getItem("theme") || ("dark" as "light" | "dark");
+  applyTheme(savedTheme);
 }
 
 onMounted(() => {

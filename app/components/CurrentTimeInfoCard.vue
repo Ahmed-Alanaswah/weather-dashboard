@@ -1,8 +1,11 @@
 <template>
   <div class="current-time-info">
-    <h2 class="city">{{ props.city }}</h2>
-    <h1 class="time">{{ props.time }}</h1>
-    <p class="date">{{ props.date }}</p>
+    <h2 v-if="props.city" class="city">{{ props.city }}</h2>
+    <div v-else class="skeleton-line skeleton-city"></div>
+    <h1 v-if="props.time" class="time">{{ props.time }}</h1>
+    <div v-else class="skeleton-line skeleton-time"></div>
+    <p v-if="props.date" class="date">{{ props.date }}</p>
+    <div v-else class="skeleton-line skeleton-date"></div>
   </div>
 </template>
 
@@ -21,4 +24,4 @@ const props = withDefaults(
 );
 </script>
 
-<style scoped src="../../public/assets/css/CurrentTimeInfoCard.css"></style>
+<style scoped src="../../assets/css/CurrentTimeInfoCard.css"></style>

@@ -53,4 +53,4 @@ watch(
 );
 </script>
 
-<style scoped src="../../public/assets/css/SearchBar.css"></style>
+<style scoped src="../../assets/css/SearchBar.css"></style>

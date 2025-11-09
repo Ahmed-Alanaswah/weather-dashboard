@@ -27,4 +27,4 @@ function onToggleTheme() {
 }
 </script>
 
-<style scoped src="../../public/assets/css/AppHeader.css"></style>
+<style scoped src="../../assets/css/AppHeader.css"></style>

@@ -1,8 +1,13 @@
 <template>
   <div class="container">
-    <img :src="props.url" />
-    <p class="temp">{{ props.info }} {{ props.unit }}</p>
-    <p class="desc">{{ props.desc }}</p>
+    <img v-if="props.url" :src="props.url" />
+    <div v-else class="skeleton-icon"></div>
+    <p v-if="props.info !== null && props.info !== ''" class="temp">
+      {{ props.info }} {{ props.unit }}
+    </p>
+    <div v-else class="skeleton-line skeleton-info"></div>
+    <p v-if="props.desc" class="desc">{{ props.desc }}</p>
+    <div v-else class="skeleton-line skeleton-desc"></div>
   </div>
 </template>
 

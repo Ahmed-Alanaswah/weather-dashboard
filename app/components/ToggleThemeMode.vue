@@ -26,4 +26,4 @@ function toggle() {
 }
 </script>
 
-<style scoped src="../../public/assets/css/ToggleThemeMode.css"></style>
+<style scoped src="../../assets/css/ToggleThemeMode.css"></style>
