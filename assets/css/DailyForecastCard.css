@@ -107,7 +107,7 @@ h2 {
   }
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1199px) {
   .day-card {
     gap: 10px;
   }
@@ -120,5 +120,14 @@ h2 {
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
+  }
+}
+
+@media (max-width: 991px) {
+  .day-card {
+    justify-content: space-around;
+  }
+  .card-container {
+    max-width: 100%;
   }
 }

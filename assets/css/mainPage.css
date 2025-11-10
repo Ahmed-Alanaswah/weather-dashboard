@@ -101,15 +101,30 @@
   text-align: center;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1199px) {
   .app-container {
     padding: 0 24px;
   }
-  .app-container .top > div + div {
-    flex: 0.7;
+  .app-container .top {
+    display: contents;
   }
 
+  /* .app-container .top > div + div {
+    flex: 0.7;
+  } */
+  /* .card-wrapper {
+    display: contents;
+  }
+  .app-container .top div {
+    flex: 1;
+  } */
   .app-container .bottom div {
     flex: 0.5;
+  }
+}
+
+@media (max-width: 991px) {
+  .app-container .bottom {
+    flex-direction: column;
   }
 }

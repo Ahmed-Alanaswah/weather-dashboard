@@ -159,7 +159,12 @@
   justify-content: space-between;
   padding-top: 25px;
 }
-
+.right-info .top,
+.right-info .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /* ==========================
    Skeleton Animation
 ========================== */
@@ -184,13 +189,23 @@
   }
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1199px) {
   .left-info > h2 {
     font-weight: 600;
     font-size: 45px;
     line-height: 45px;
   }
+  .center-info {
+    align-items: center;
+  }
   .center-info img {
     width: 150px;
   }
+
+  /* .right-info .top,
+  .right-info .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  } */
 }

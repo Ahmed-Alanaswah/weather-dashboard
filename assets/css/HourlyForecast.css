@@ -134,7 +134,7 @@ span {
   }
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1199px) {
   .hour-card {
     gap: 10px;
     padding: 0 10px;
