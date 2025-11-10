@@ -47,11 +47,7 @@ onMounted(() => {
       </div>
       <div v-else class="top" :key="placeKey">
         <!-- Example usage of the CardCoxShadow component wrapping CurrentTimeInfoCard -->
-        <div
-          style="flex: 0.4"
-          class="card-wrapper"
-          :class="{ 'loading-overlay': isLoading }"
-        >
+        <div class="card-wrapper" :class="{ 'loading-overlay': isLoading }">
           <CardCoxShadow>
             <!-- pass fetched data as props -->
             <CurrentTimeInfoCard
@@ -64,11 +60,7 @@ onMounted(() => {
             <LoadingSpinner />
           </div>
         </div>
-        <div
-          style="flex: 0.6"
-          class="card-wrapper"
-          :class="{ 'loading-overlay': isLoading }"
-        >
+        <div class="card-wrapper" :class="{ 'loading-overlay': isLoading }">
           <CardCoxShadow>
             <!-- pass fetched data as props to the weather card -->
             <CurrentInfoWeather
@@ -109,11 +101,7 @@ onMounted(() => {
         </div>
       </div>
       <div v-else class="bottom" :key="`${placeKey}-bottom`">
-        <div
-          style="flex: 0.3"
-          class="card-wrapper"
-          :class="{ 'loading-overlay': isLoading }"
-        >
+        <div class="card-wrapper" :class="{ 'loading-overlay': isLoading }">
           <CardCoxShadow>
             <DailyForecastCard :days="store.days" />
           </CardCoxShadow>
@@ -121,11 +109,7 @@ onMounted(() => {
             <LoadingSpinner />
           </div>
         </div>
-        <div
-          style="flex: 0.7"
-          class="card-wrapper"
-          :class="{ 'loading-overlay': isLoading }"
-        >
+        <div class="card-wrapper" :class="{ 'loading-overlay': isLoading }">
           <CardCoxShadow>
             <HourlyForecast :hours="store.hours" />
           </CardCoxShadow>

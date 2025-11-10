@@ -2,6 +2,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
+  gap: 30px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+}
+
+.app-header > div:nth-child(2) {
+  flex: 1; /* Let SearchBar take remaining space */
+}
+
+/* On small screens, stack all items */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .app-header > div {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .app-header > div:nth-child(2) {
+    flex: unset;
+    width: 100%;
+  }
 }

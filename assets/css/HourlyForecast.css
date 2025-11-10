@@ -24,7 +24,7 @@
   align-items: center;
   justify-content: center;
 
-  width: 130px;
+  max-width: 130px;
   height: 270px;
 
   background: var(--card-card-bg, #373636);
@@ -36,7 +36,15 @@
 .hour-card:nth-last-child(1) {
   background: var(--card-card-night-bg, #373636);
 }
-
+.hour-card {
+  padding: 0 15px;
+  gap: 10px;
+}
+.hour-card span {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
 /* ==========================
    Headings and Text
 ========================== */
@@ -123,5 +131,27 @@ span {
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1224px) {
+  .hour-card {
+    gap: 10px;
+    padding: 0 10px;
+  }
+  .card-container h2 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .hour-card span {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  .hour-card img:nth-child(4) {
+    width: 30px;
+    height: 30px;
   }
 }

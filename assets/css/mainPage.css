@@ -76,6 +76,22 @@
   }
 }
 
+.app-container .bottom > div {
+  flex: 0.3;
+}
+
+.app-container .bottom > div + div {
+  flex: 0.7;
+}
+
+.app-container .top > div {
+  flex: 0.4;
+}
+
+.app-container .top > div + div {
+  flex: 0.6;
+}
+
 .error-banner {
   background-color: #f87171; /* red-400 */
   color: white;
@@ -83,4 +99,17 @@
   border-radius: 4px;
   margin-bottom: 12px;
   text-align: center;
+}
+
+@media (max-width: 1224px) {
+  .app-container {
+    padding: 0 24px;
+  }
+  .app-container .top > div + div {
+    flex: 0.7;
+  }
+
+  .app-container .bottom div {
+    flex: 0.5;
+  }
 }

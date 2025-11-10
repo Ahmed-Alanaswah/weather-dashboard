@@ -2,7 +2,7 @@
    Card Container
 ========================== */
 .card-container {
-  width: 445px;
+  max-width: 445px;
   color: var(--card-color, #fff);
 }
 
@@ -104,5 +104,21 @@ h2 {
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1224px) {
+  .day-card {
+    gap: 10px;
+  }
+  .card-container h2 {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .day-card span {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
   }
 }

@@ -19,7 +19,7 @@
 }
 
 .center-info img {
-  width: 200px;
+  max-width: 200px;
 }
 
 .center-info h2 {
@@ -181,5 +181,16 @@
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+@media (max-width: 1224px) {
+  .left-info > h2 {
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 45px;
+  }
+  .center-info img {
+    width: 150px;
   }
 }

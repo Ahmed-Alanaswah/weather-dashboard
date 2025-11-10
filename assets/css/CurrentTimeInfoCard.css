@@ -83,3 +83,23 @@
     background-position: -200% 0;
   }
 }
+
+@media (max-width: 1224px) {
+  .current-time-info .city {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .current-time-info .time {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 70x;
+  }
+
+  .current-time-info .date {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
