@@ -1,75 +1,86 @@
-# Nuxt Minimal Starter
+# Vue Weather App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A modern weather application built with Vue 3, TypeScript, and Pinia that allows users to view current weather, 5-day forecasts, hourly weather data, and search for any city. It also provides the user's current location weather data with a single click.
 
-## Setup
+---
 
-Make sure to install dependencies:
+## 📦 Tech Stack
+
+- **Frontend:** Vue 3, TypeScript, HTML, CSS, JavaScript
+- **State Management:** Pinia
+- **APIs:** weatherapi.com
+- **Deployed link:**
+
+---
+
+## ⚡ Features Implemented
+
+- Display **current weather data** for any city
+- Display **5-day weather forecast**
+- Display **hourly weather data**
+- **Search functionality** for cities
+- **Get current location weather** using geolocation API
+
+### Extra Features
+
+- **Theme toggle** (light/dark)
+- **Skeleton loaders** for smooth loading experience
+- **Loading spinners** during API calls
+- **Transition animations** for better UI experience
+- Fully written in **TypeScript**
+
+---
+
+## 🚀 Setup Instructions
+
+1. **Clone the repository**
 
 ```bash
-# npm
+git clone git@github.com:Ahmed-Alanaswah/weather-dashboard.git
+or
+git clone https://github.com/Ahmed-Alanaswah/weather-dashboard.git
+```
+
+2. **navigate to repository**
+
+```bash
+cd weather-dashboard
+```
+
+3. **Install dependencies**
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+4. **Run the development server**
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+5. **Open your browser** at http://localhost:3000 (or the port displayed in terminal)
 
-Build the application for production:
+6. **Environment Variables** Create a .env file in the root directory and add your weather API key:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+WEATHERAPI_KEY=your_api_key_here
 ```
 
-Locally preview production build:
+## 📸 Screenshots
 
-```bash
-# npm
-npm run preview
+### Desktop screen dark
 
-# pnpm
-pnpm preview
+![desktop dark](./screenshots/desktop-dark.png)
 
-# yarn
-yarn preview
+### Desktop screen light
 
-# bun
-bun run preview
-```
+![desktop light](./screenshots/desktop-light.png)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Mobile screen dark
+
+![mobile dark](./screenshots/mobile-dark.png)
+
+### Mobile screen light
+
+![mobile light](./screenshots/mobile-light.png)
