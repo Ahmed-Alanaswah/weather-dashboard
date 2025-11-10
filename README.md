@@ -84,3 +84,8 @@ WEATHERAPI_KEY=your_api_key_here
 ### Mobile screen light
 
 ![mobile light](./screenshots/mobile-light.png)
+
+## 🎥 Demo
+
+![Desktop Demo](./screenshots/Desktop-Demo.gif)
+![Mobile Demo](./screenshots/Mobile-Demo.gif)
