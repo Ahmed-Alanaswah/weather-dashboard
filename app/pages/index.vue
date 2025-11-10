@@ -28,7 +28,8 @@ onMounted(() => {
 <template>
   <!-- Error Banner -->
   <div v-if="store.error" class="error-banner">
-    {{ store.error }}
+    It is allowed to search about 1 and available loaction , check spelling
+    please..
   </div>
   <div v-else class="app-container" v-cloak>
     <Transition name="fade-slide" mode="out-in">
