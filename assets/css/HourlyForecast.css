@@ -133,7 +133,9 @@ span {
     background-position: -200% 0;
   }
 }
-
+/* ==========================
+   responsive styles
+========================== */
 @media (max-width: 1199px) {
   .hour-card {
     gap: 10px;

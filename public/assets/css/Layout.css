@@ -1,12 +1,10 @@
 /* ==========================
    FOUC & Initial Load
 ========================== */
-/* Prevent FOUC - Hide elements until Vue is ready */
 [v-cloak] {
   display: none !important;
 }
 
-/* Initial Nuxt loading screen */
 #__nuxt {
   min-height: 100vh;
   opacity: 0;
@@ -25,23 +23,18 @@ body {
   max-width: 1512px;
   min-height: 982px;
   padding-top: 63px;
-  /* padding-bottom: 63px; */
-
-  /* Dark gradient background by default */
   background: linear-gradient(
     110.05deg,
     #383838 0%,
     rgba(158, 158, 158, 0) 71.82%
   );
-  color: #111111;
+  color: #111;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-
-  /* Smooth theme transitions */
   transition: background 0.5s ease-in-out;
-  opacity: 0; /* prevent flash during load */
+  opacity: 0;
 }
 
 body.loaded {
@@ -49,12 +42,10 @@ body.loaded {
   transition: opacity 0.2s ease-in;
 }
 
-/* Light theme body override */
 .theme-light body {
-  background: linear-gradient(112.65deg, #ffffff 0.28%, #466173 178.65%);
+  background: linear-gradient(112.65deg, #fff 0.28%, #466173 178.65%);
 }
 
-/* Layout container */
 .layout-container {
   max-width: 1326px;
   margin: 0 auto;
@@ -64,50 +55,44 @@ body.loaded {
    Theme Variables
 ========================== */
 :root {
-  /* Smooth variable transitions */
   transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-/* Dark Theme Variables */
+/* Dark Theme */
 :root.theme-dark {
   --card-bg: #444;
   --bg-time-color: linear-gradient(
     84.4deg,
-    #ffffff -16.56%,
+    #fff -16.56%,
     rgba(255, 255, 255, 0) 118.43%
   ) !important;
-  --card-color: #ffffff;
+  --card-color: #fff;
   --muted-color: rgba(255, 255, 255, 0.8);
-
   --action-bg: #4cbb17;
-  --action-color: #ffffff;
-
+  --action-color: #fff;
   --toggle-track-bg: #d9d9d9;
   --card-card-bg: #373636;
   --card-card-night-bg: #373636;
-  --toggle-track-on-bg: #111111;
-  --thumb-bg: #111111;
-  --thumb-on-bg: #ffffff;
-
-  --toggle-label-color: #000000;
-  --toggle-label-on-color: #ffffff;
-
+  --toggle-track-on-bg: #111;
+  --thumb-bg: #111;
+  --thumb-on-bg: #fff;
+  --toggle-label-color: #000;
+  --toggle-label-on-color: #fff;
   --icon-filter: none;
   --skeleton-base: rgba(255, 255, 255, 0.1);
   --skeleton-highlight: rgba(255, 255, 255, 0.2);
 }
 
-/* Light Theme Variables */
+/* Light Theme */
 :root.theme-light {
   --card-bg: #d9d9d9;
   --bg-time-color: linear-gradient(
     80.34deg,
     #292929 -2.93%,
-    #ffffff 212.44%
+    #fff 212.44%
   ) !important;
-  --card-color: #111111;
+  --card-color: #111;
   --muted-color: rgba(17, 17, 17, 0.8);
-
   --card-card-bg: linear-gradient(
     170.72deg,
     #f88508 -14.96%,
@@ -118,27 +103,21 @@ body.loaded {
     #443d64 -15.92%,
     rgba(101, 130, 198, 0) 192.45%
   );
-
   --action-bg: #4cbb17;
-  --action-color: #ffffff;
-
+  --action-color: #fff;
   --toggle-track-bg: #d9d9d9;
   --toggle-track-on-bg: #d9d9d9;
-  --thumb-bg: #111111;
-  --thumb-on-bg: #ffffff;
-
-  --toggle-label-color: #000000;
-  --toggle-label-on-color: #111111;
-
-  /* Invert light icons */
+  --thumb-bg: #111;
+  --thumb-on-bg: #fff;
+  --toggle-label-color: #000;
+  --toggle-label-on-color: #111;
   --icon-filter: invert(1) grayscale(1) contrast(0.9);
-
   --skeleton-base: rgba(17, 17, 17, 0.1);
   --skeleton-highlight: rgba(17, 17, 17, 0.2);
 }
 
 /* ==========================
-   Transition for interactive elements
+   Transitions
 ========================== */
 .card-cox-shadow,
 button,
@@ -149,18 +128,17 @@ input,
 }
 
 /* ==========================
-   Icon Filters for Theme
+   Icon Filters
 ========================== */
-.theme-light img[src^="/assets/icons/"]:not([src*="/assets/icons/wind/"]) {
-  filter: var(--icon-filter, none);
-  transition: filter 0.5s ease-in-out;
-}
-
+.theme-light img[src^="/assets/icons/"]:not([src*="/assets/icons/wind/"]),
 .theme-dark img[src^="/assets/icons/"]:not([src*="/assets/icons/wind/"]) {
   filter: var(--icon-filter, none);
   transition: filter 0.5s ease-in-out;
 }
 
+/* ==========================
+   Responsive
+========================== */
 @media (max-width: 991px) {
   body {
     padding-top: 30px;

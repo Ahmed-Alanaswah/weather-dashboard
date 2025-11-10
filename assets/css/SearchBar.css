@@ -64,9 +64,6 @@
 
 /* On small screens, stack all items */
 @media (max-width: 768px) {
-  /* .search-input-wrapper {
-    max-width: 600px;
-  }*/
   .search-input-wrapper input::placeholder {
     font-size: 14px;
   }

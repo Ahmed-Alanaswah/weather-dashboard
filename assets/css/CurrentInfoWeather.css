@@ -201,13 +201,6 @@
   .center-info img {
     width: 150px;
   }
-
-  /* .right-info .top,
-  .right-info .bottom {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  } */
 }
 
 @media (max-width: 768px) {
