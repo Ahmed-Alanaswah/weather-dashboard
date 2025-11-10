@@ -9,7 +9,7 @@ A modern weather application built with Vue 3, TypeScript, and Pinia that allows
 - **Frontend:** Vue 3, TypeScript, HTML, CSS, JavaScript
 - **State Management:** Pinia
 - **APIs:** weatherapi.com
-- **Deployed link:**
+- **Deployed link:**: [weather-dashboard-alanasweh](https://weather-dashboard-alanasweh.netlify.app/)
 
 ---
 
