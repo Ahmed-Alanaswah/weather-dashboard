@@ -46,7 +46,7 @@ function cancelPreviousRequest() {
 function buildApiUrl(query: string): string {
   const config = useRuntimeConfig();
   const key = config.public.WEATHERAPI_KEY;
-  return `http://api.weatherapi.com/v1/forecast.json?key=${encodeURIComponent(
+  return `https://api.weatherapi.com/v1/forecast.json?key=${encodeURIComponent(
     key
   )}&q=${encodeURIComponent(query)}&days=5`;
 }
