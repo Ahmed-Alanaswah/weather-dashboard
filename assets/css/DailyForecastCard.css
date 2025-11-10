@@ -131,3 +131,10 @@ h2 {
     max-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .day-card {
+    justify-content: left;
+    gap: 30px;
+  }
+}

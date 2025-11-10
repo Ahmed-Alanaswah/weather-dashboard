@@ -109,15 +109,6 @@
     display: contents;
   }
 
-  /* .app-container .top > div + div {
-    flex: 0.7;
-  } */
-  /* .card-wrapper {
-    display: contents;
-  }
-  .app-container .top div {
-    flex: 1;
-  } */
   .app-container .bottom div {
     flex: 0.5;
   }

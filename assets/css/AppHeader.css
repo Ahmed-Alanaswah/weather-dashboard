@@ -14,7 +14,7 @@
 
 /* On small screens, stack all items */
 @media (max-width: 768px) {
-  .app-header {
+  /* .app-header {
     flex-direction: column;
     align-items: stretch;
     gap: 16px;
@@ -28,5 +28,27 @@
   .app-header > div:nth-child(2) {
     flex: unset;
     width: 100%;
+  } */
+
+  .app-header {
+    /* flex-direction: column !important; */
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 700px) {
+  div:has(.toggle-wrapper),
+  div:has(.search-bar),
+  div:has(.current-location) {
+    width: 100%;
+  }
+  .serach-bar input {
+    width: -webkit-fill-available;
+  }
+  .current-location {
+    margin: 0;
+  }
+  .app-header {
+    flex-direction: column;
   }
 }

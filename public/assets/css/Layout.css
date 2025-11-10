@@ -25,6 +25,7 @@ body {
   max-width: 1512px;
   min-height: 982px;
   padding-top: 63px;
+  /* padding-bottom: 63px; */
 
   /* Dark gradient background by default */
   background: linear-gradient(
@@ -158,4 +159,11 @@ input,
 .theme-dark img[src^="/assets/icons/"]:not([src*="/assets/icons/wind/"]) {
   filter: var(--icon-filter, none);
   transition: filter 0.5s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }

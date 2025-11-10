@@ -209,3 +209,32 @@
     gap: 10px;
   } */
 }
+
+@media (max-width: 768px) {
+  .current-info-weather {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .left-info {
+    align-items: center;
+    padding-left: 0;
+  }
+  .left-info .astro {
+    margin-left: 0;
+  }
+  .right-info {
+    justify-content: center;
+    gap: 50px;
+  }
+  .right-info .top,
+  .right-info .bottom {
+    gap: 20px;
+  }
+  .center-info {
+    gap: 0;
+  }
+  .center-info img {
+    width: 100px;
+  }
+}
